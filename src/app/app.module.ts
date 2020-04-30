@@ -7,6 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { tutorialReducer } from './reducer/tutorial.reducer';
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
+import { userReducer } from './reducer/user.reducer';
 
 @NgModule({
   declarations: [AppComponent, ReadComponent, CreateComponent],
@@ -15,6 +16,7 @@ import { CreateComponent } from './create/create.component';
     AppRoutingModule,
     StoreModule.forRoot({
       tutorial: tutorialReducer,
+      user: userReducer,
     }),
   ],
   providers: [],

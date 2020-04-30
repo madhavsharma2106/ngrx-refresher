@@ -6,4 +6,11 @@
       <button (click)="deleteTutorial(i)">Delete</button>
     </li>
   </ul>
+  <h3>Users</h3>
+  <ul>
+    <li *ngFor="let user of users | async">
+      <a>{{ user.name }} | {{ user.age }}s</a>
+      <button (click)="deleteUser(user.id)">Delete</button>
+    </li>
+  </ul>
 </div>
