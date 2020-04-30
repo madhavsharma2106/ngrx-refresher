@@ -1,0 +1,7 @@
+<h2>Create Tutorial</h2>
+<input type="text" placeholder="Name" #name />
+<input type="text" placeholder="Url" #url />
+
+<button class="submit" (click)="addTutorial(name.value, url.value)">
+  Create
+</button>
