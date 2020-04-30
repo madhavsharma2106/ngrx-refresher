@@ -15,6 +15,9 @@ export function tutorialReducer(
     case TutorialActions.ADD_TUORIAL: {
       return [...state, action.payload];
     }
+    case TutorialActions.REMOVE_TUORIAL: {
+      return state.filter((tut, index) => index !== action.payload);
+    }
     default:
       return state;
   }

@@ -1,8 +1,9 @@
 <div *ngIf="tutorials">
   <h3>Tutorials</h3>
   <ul>
-    <li *ngFor="let tutorial of tutorials | async">
+    <li *ngFor="let tutorial of tutorials | async; let i = index">
       <a [href]="tutorial.url">{{ tutorial.name }}</a>
+      <button (click)="deleteTutorial(i)">Delete</button>
     </li>
   </ul>
 </div>
